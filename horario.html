@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário Semanal - LEONARDO S.B.</title>
+    <!-- Incluindo Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Global e Fundo ESCURO */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1f2937; /* Fundo Escuro (Cinza Carvão) */
+            padding-bottom: 4rem;
+        }
+        /* Classe para o contêiner principal */
+        .schedule-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* Estilos base para os cartões de dia, com fundo claro para destaque */
+        .day-card {
+            background-color: #374151; /* Fundo mais claro para o cartão (Cinza Médio) */
+            border-left: 5px solid;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais forte no modo escuro */
+            transition: transform 0.2s;
+        }
+        .day-card:hover {
+            transform: translateY(-2px);
+        }
+        /* Cores customizadas para as AULAS: AZUL */
+        .class-event {
+            background-color: #bfdbfe; /* Azul claro (fundo do evento) */
+            color: #1e40af; /* Azul escuro (texto do evento) */
+            border-left: 4px solid #3b82f6; /* Borda azul vibrante */
+        }
+        /* Cores customizadas para o TRABALHO: VERDE-AZULADO */
+        .work-event {
+            background-color: #d1fae5; /* Verde-azulado claro (fundo do evento) */
+            color: #047857; /* Verde escuro (texto do evento) */
+            border-left: 4px solid #10b981; /* Borda verde vibrante */
+        }
+        /* Cores de texto padrão para o modo escuro */
+        .text-dark-contrast {
+            color: #f3f4f6; /* Texto claro para contraste */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="schedule-container p-4">
+        <!-- Título do Aplicativo (fundo do cabeçalho mais escuro) -->
+        <header class="text-center py-6 mb-6 bg-gray-800 rounded-xl shadow-2xl">
+            <h1 class="text-3xl font-extrabold text-white">Horário Semanal</h1>
+            <p class="text-sm text-gray-400 mt-1">Eng. de Computação & Trabalho</p>
+        </header>
+
+        <!-- Container de Dias (Grade Responsiva) -->
+        <div class="space-y-6">
+
+            <!-- SEGUNDA-FEIRA -->
+            <div class="day-card p-4 rounded-xl border-blue-500">
+                <h2 class="text-xl font-bold text-blue-300 mb-3 border-b border-gray-600 pb-2">Segunda-feira</h2>
+                <div class="space-y-2">
+                    <div class="work-event p-3 rounded-lg flex justify-between items-center">
+                        <span class="font-medium">Trabalho</span>
+                        <span class="font-semibold">08:00 às 16:00</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Fundamentos Teóricos da Computação</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI476-11T | Sala: E203</span>
+                        </div>
+                        <span class="font-semibold text-right">21:00 às 22:40</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TERÇA-FEIRA -->
+            <div class="day-card p-4 rounded-xl border-blue-500">
+                <h2 class="text-xl font-bold text-blue-300 mb-3 border-b border-gray-600 pb-2">Terça-feira</h2>
+                <div class="space-y-2">
+                    <div class="work-event p-3 rounded-lg flex justify-between items-center">
+                        <span class="font-medium">Trabalho</span>
+                        <span class="font-semibold">08:00 às 16:00</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Algoritmos e Estruturas de Dados II</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI104-23T | Sala: C202</span>
+                        </div>
+                        <span class="font-semibold text-right">17:10 às 18:50</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Sistemas Distribuídos</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI433-11T | Sala: C308</span>
+                        </div>
+                        <span class="font-semibold text-right">19:00 às 20:40</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Redes de Computadores II</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI510-11T | Sala: D204</span>
+                        </div>
+                        <span class="font-semibold text-right">21:00 às 22:40</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUARTA-FEIRA -->
+            <div class="day-card p-4 rounded-xl border-blue-500">
+                <h2 class="text-xl font-bold text-blue-300 mb-3 border-b border-gray-600 pb-2">Quarta-feira</h2>
+                <div class="space-y-2">
+                    <div class="work-event p-3 rounded-lg flex justify-between items-center">
+                        <span class="font-medium">Trabalho</span>
+                        <span class="font-semibold">07:00 às 12:00</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Sinais e Sistemas</span>
+                            <span class="text-xs block opacity-80 mt-0.5">ELT562-23T | Sala: D204</span>
+                        </div>
+                        <span class="font-semibold text-right">13:30 às 15:10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUINTA-FEIRA -->
+            <div class="day-card p-4 rounded-xl border-blue-500">
+                <h2 class="text-xl font-bold text-blue-300 mb-3 border-b border-gray-600 pb-2">Quinta-feira</h2>
+                <div class="space-y-2">
+                    <div class="work-event p-3 rounded-lg flex justify-between items-center">
+                        <span class="font-medium">Trabalho</span>
+                        <span class="font-semibold">08:00 às 16:00</span>
+                    </div>
+                    <!-- CSI104 é T+P, mantive o nome da disciplina para ser mais legível -->
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Algoritmos e Estruturas de Dados II (T/P)</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI104-23 | Sala: C202</span>
+                        </div>
+                        <span class="font-semibold text-right">17:10 às 18:50</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Sistemas Distribuídos</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI433-11T | Sala: C308</span>
+                        </div>
+                        <span class="font-semibold text-right">19:00 às 20:40</span>
+                    </div>
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Fundamentos Teóricos da Computação</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI476-11T | Sala: E203</span>
+                        </div>
+                        <span class="font-semibold text-right">21:00 às 22:40</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEXTA-FEIRA -->
+            <div class="day-card p-4 rounded-xl border-blue-500">
+                <h2 class="text-xl font-bold text-blue-300 mb-3 border-b border-gray-600 pb-2">Sexta-feira</h2>
+                <div class="space-y-2">
+                    <div class="work-event p-3 rounded-lg flex justify-between items-center">
+                        <span class="font-medium">Trabalho</span>
+                        <span class="font-semibold">07:00 às 12:00</span>
+                    </div>
+                    <!-- ELT562 é T+P, mantive o nome da disciplina para ser mais legível -->
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Sinais e Sistemas (T/P)</span>
+                            <span class="text-xs block opacity-80 mt-0.5">ELT562-23 | Sala: D204</span>
+                        </div>
+                        <span class="font-semibold text-right">13:30 às 15:10</span>
+                    </div>
+                    <!-- CSI510 é T+P, mantive o nome da disciplina para ser mais legível -->
+                    <div class="class-event p-3 rounded-lg flex justify-between items-center">
+                        <div>
+                            <span class="font-medium font-semibold">Redes de Computadores II (T/P)</span>
+                            <span class="text-xs block opacity-80 mt-0.5">CSI510-11 | Sala: D204</span>
+                        </div>
+                        <span class="font-semibold text-right">19:00 às 20:40</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SÁBADO e DOMINGO -->
+            <div class="day-card p-4 rounded-xl border-green-400 text-center">
+                <h2 class="text-xl font-bold text-green-400 mb-2">Fim de Semana</h2>
+                <p class="text-lg font-medium text-gray-400">Horário Livre!</p>
+            </div>
+
+        </div>
+
+        <!-- Legenda de Cores -->
+        <footer class="mt-8 pt-4 border-t border-gray-700 text-center">
+            <h3 class="text-lg font-semibold text-white mb-2">Legenda</h3>
+            <div class="flex justify-center space-x-4 text-sm text-dark-contrast">
+                <span class="inline-flex items-center">
+                    <span class="h-3 w-3 rounded-full mr-2 bg-green-500"></span> Trabalho
+                </span>
+                <span class="inline-flex items-center">
+                    <span class="h-3 w-3 rounded-full mr-2 bg-blue-500"></span> Aula
+                </span>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
